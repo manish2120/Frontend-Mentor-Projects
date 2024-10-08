@@ -20,11 +20,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Desktop view
 
-<img src="./screenshots/desktop-view.png" alt="Desktop view" width="300" height="200">
+<img src="./screenshots/desktop-view.png" alt="Desktop view" width="300" height="auto">
 
 ### Mobile view
 
-<img src="./screenshots/mobile-view.png" alt="Mobile view" width="300" height="200">
+<img src="./screenshots/mobile-view.png" alt="Mobile view" width="300" height="auto">
 
 
 ### Links
