@@ -1,0 +1,83 @@
+/* begin - css resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* outfit-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/outfit-v11-latin/outfit-v11-latin-regular.woff2') format('woff2');
+}
+
+/* outfit-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/outfit-v11-latin/outfit-v11-latin-700.woff2') format('woff2');
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: hsl(212, 45%, 89%);
+}
+
+#container {
+  max-width: 320px;
+  max-height: 499px;
+  padding: 16px;
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 25 25 #000000;
+  display: grid;
+  gap: 24px;
+}
+
+#container .img-wrapper {
+  width: 288px;
+  height: 288px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#container .img-wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text-wrapper {
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 40px;
+  display: grid;
+  gap: 16px;
+}
+
+.text-wrapper h4 {
+  font-size: 22px;
+  color: hsl(218, 44%, 22%);
+}
+
+.text-wrapper p {
+  font-size: 15px;
+  color: hsl(216, 15%, 48%);
+  padding: 0 16px 0 16px
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+}
