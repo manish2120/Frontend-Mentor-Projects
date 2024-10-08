@@ -20,7 +20,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Desktop view
 
-<img src="./screenshots/desktop-view.png" alt="Desktop view" width="300" height="auto">
+<img src="./screenshots/desktop-view.png" alt="Desktop view" width="500" height="auto">
 
 ### Mobile view
 
