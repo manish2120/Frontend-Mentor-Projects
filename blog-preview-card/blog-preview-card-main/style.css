@@ -112,6 +112,12 @@ body {
 .blog-card__title {
   font-size: var(--fs-medium);
   font-weight: var(--ff-extra-bold-800);
+  transition: color linear 0.2s;
+  cursor: pointer;
+}
+
+.blog-card__title:hover {
+  color: hsl(47, 88%, 63%);
 }
 
 .blog-card__main-content {
@@ -133,5 +139,15 @@ body {
   width: 32px;
   overflow: hidden;
 }
+
+.blog-card__author-name {
+  cursor: pointer;
+  transition: color linear 0.2s;
+}
+
+.blog-card__author-name:hover {
+  color: hsl(47, 88%, 63%);
+}
+
 
 /* -------- END - MAIN STYLING -------- */
