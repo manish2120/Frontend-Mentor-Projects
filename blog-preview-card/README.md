@@ -15,7 +15,7 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 - [Author](#author)
 
 ## Overview
-A simple blog card challenge by f
+A simple blog card challenge by frontend mentor.
 
 ### Screenshot
 
