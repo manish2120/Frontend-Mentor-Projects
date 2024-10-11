@@ -45,7 +45,7 @@ A simple blog card challenge by frontend mentor.
 
 ### What I learned
 
--Tried BEM(Block Element Modifier) CSS for the first.
+- Tried BEM(Block Element Modifier) CSS for the first time.
 
 ### Continued development
 
