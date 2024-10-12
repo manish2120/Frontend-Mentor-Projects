@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Preview](https:/social-links-profile-mchv.vercel.app/)
+- Live Site URL: [Live Preview](https://social-links-profile-mchv.vercel.app)
 
 ## My process
 
