@@ -1,0 +1,79 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+.padding-block {
+  padding-block: 0.7rem;
+}
+
+/* custom colors */
+.lime-green-color {
+  color: #C1DE51;
+}
+
+/* custom buttons */
+.btn-light-gray {
+  background-color: #333333;
+  color: #fff;
+}
+
+.btn-light-gray:hover {
+  background-color: #C1DE51;
+  color: #000;
+}
+
+/* custom background color */
+.bg-light-black {
+  background-color: #141414;
+}
+
+.bg-dark-gray {
+  background-color: #1F1F1F;
+}
+
+/* custom font family */
+.ff-inter {
+  font-family: 'Inter';
+}
+
+/* custom font styles */
+.fs-x-small {
+  font-size: 0.8125rem;
+}
+.fs-small {
+  font-size: 0.875rem;
+}
+
+.fs-large {
+  font-size: 1.0625rem;
+}
+
+/* cutom width */
+.min-w-40 {
+  min-width: 400px;
+}
+
+/* custom height */
+.min-h-50 {
+  min-height: 550px;
+}
+
+/* custom styles */
+.img-wrapper {
+  width: 100px;
+  height: 100px;
+}
+
+/* media queries */
+@media screen and (max-width: 375px) {
+  .bg-black {
+    min-width: 100%;
+  }
+
+  .min-w-40 {
+    min-width: 300px;
+  }
+}
