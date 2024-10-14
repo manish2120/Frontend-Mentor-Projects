@@ -1,0 +1,134 @@
+/* CSS RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* img {
+  display: block;
+} */
+
+p, h1, h2, h3, h4, h5, ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* FONT FACE */
+@font-face {
+  font-display: swap;
+  font-family: 'YoungSerif';
+  font-style: normal;
+  src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Outfit';
+  font-style: normal;
+  src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+
+/* ROOT VARIABLES */
+:root {
+ --text-light-brown: #824731;
+ --text-dark-pink: #783C56;
+}
+
+/* BACKGROUND COLORS */
+.custom-bg-beige {
+  background-color: #F3E5D8;
+}
+
+.custom-bg-light-pink {
+  background-color: #f9eff6;
+} 
+
+/* COLORS */
+.custom-text-light-brown {
+  color: var(--text-light-brown);
+}
+
+.custom-text-dark-pink {
+  color: var(--text-dark-pink);
+}
+
+/* FONT FAMILY */
+.ff-outfit-regular {
+  font-family: 'Outfit', Arial, sans-serif;
+}
+
+.ff-youngserif-regular {
+  font-family: 'YoungSerif';
+}
+
+.custom-min-vw-100 {
+  min-width: 100vw;
+}
+
+.custom-min-vh-100 {
+  min-height: 100vh;
+}
+
+.custom-min-vh-75 {
+  min-height: 75vh;
+}
+
+.custom-max-vw-75 {
+  max-width: 75vw;
+}
+
+.custom-list li::marker {
+  color: var(--text-dark-pink);
+  font-size: 0.7rem;
+}
+
+ul.custom-list li {
+  padding-left: 1rem; /* by default list-style-position is outside the content box*/
+  margin-left: 1.5rem;
+}
+
+.custom-list-type-number li {
+  /* padding-left: 0.7rem; */
+  color: var(--text-dark-pink);
+  padding-left: 1rem;
+  margin-left: 1.5rem;
+}
+
+.custom-list-type-number li::marker {
+  font-weight: bold;
+}
+
+.row-list .row p {
+  padding-left: 2.5rem;
+}
+
+.row-list .row td {
+  color: var(--text-light-brown);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 375px) {
+ .custom-bg-light-sm {
+  background-color: #fff;
+ }
+
+ .overflow-visible-sm {
+  overflow: visible;
+ }
+
+ .img-wrapper {
+  width: 100%; /* Make the wrapper full width */
+  overflow: visible; /* Ensure the image is not clipped */
+}
+
+.img-wrapper img {
+  width: 100%; /* Make the image fill the wrapper */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+ .rounded-sm-none {
+  border-radius: none;
+ }
+}
