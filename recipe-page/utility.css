@@ -5,9 +5,11 @@
   box-sizing: border-box;
 }
 
-/* img {
+img {
   display: block;
-} */
+  width: 100%;
+  height: auto;
+}
 
 p, h1, h2, h3, h4, h5, ul {
   padding: 0;
@@ -62,10 +64,7 @@ p, h1, h2, h3, h4, h5, ul {
   font-family: 'YoungSerif';
 }
 
-.custom-min-vw-100 {
-  min-width: 100vw;
-}
-
+/* CUSTOM HEIGHTS */
 .custom-min-vh-100 {
   min-height: 100vh;
 }
@@ -74,10 +73,12 @@ p, h1, h2, h3, h4, h5, ul {
   min-height: 75vh;
 }
 
+/* CUSTOM WIDTHS */
 .custom-max-vw-75 {
   max-width: 75vw;
 }
 
+/* CUSTOM LISTS */
 .custom-list li::marker {
   color: var(--text-dark-pink);
   font-size: 0.7rem;
@@ -92,43 +93,45 @@ ul.custom-list li {
   /* padding-left: 0.7rem; */
   color: var(--text-dark-pink);
   padding-left: 1rem;
-  margin-left: 1.5rem;
 }
 
 .custom-list-type-number li::marker {
   font-weight: bold;
 }
 
-.row-list .row p {
-  padding-left: 2.5rem;
+/* CUSTOM TABLES */
+.custom-table-data th {
+  font-weight: normal;
 }
 
-.row-list .row td {
+.custom-table-data tr > td {
   color: var(--text-light-brown);
   font-weight: bold;
 }
+
+.custom-table-data tr:last-child th {
+  border-bottom: none; /* Remove the bottom border from the last header */
+}
+
+/* -------- BEGIN - MEDIA QUERIES --------- */
 
 @media screen and (max-width: 375px) {
  .custom-bg-light-sm {
   background-color: #fff;
  }
 
- .overflow-visible-sm {
-  overflow: visible;
- }
-
- .img-wrapper {
-  width: 100%; /* Make the wrapper full width */
-  overflow: visible; /* Ensure the image is not clipped */
 }
 
-.img-wrapper img {
-  width: 100%; /* Make the image fill the wrapper */
-  height: auto; /* Maintain aspect ratio */
-}
+@media screen and (min-width: 376px) {
+  .custom-rounded-md-2 {
+    border-radius: 0.5rem;
+  }
 
+  .custom-img-padding {
+    padding-inline: 3rem;
+    padding-top: 3rem;
+  }
 
- .rounded-sm-none {
-  border-radius: none;
- }
+/* --------- END - MEDIA QUERIES --------- */
+
 }
