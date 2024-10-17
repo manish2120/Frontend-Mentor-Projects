@@ -75,7 +75,11 @@ p, h1, h2, h3, h4, h5, ul {
 
 /* CUSTOM WIDTHS */
 .custom-max-vw-75 {
-  max-width: 75vw;
+  max-width: 65vw;
+}
+
+.custom-my-sm-6 {
+  margin-block: 96px;
 }
 
 /* CUSTOM LISTS */
