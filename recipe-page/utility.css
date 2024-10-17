@@ -113,7 +113,8 @@ ul.custom-list li {
   font-weight: bold;
 }
 
-.custom-table-data tr:last-child th {
+.custom-table-data tr:last-child th,
+.custom-table-data tr:last-child td {
   border-bottom: none; /* Remove the bottom border from the last header */
 }
 
