@@ -1,0 +1,162 @@
+/* ------ BEGIN - CSS RESETS ------ */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+}
+
+img,
+picture {
+  display: block;
+  max-inline-size: 100%;
+  object-fit: contain;
+}
+
+html, body {
+  height: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* ----- END - CSS RESETS ------ */
+
+/* ------ BEGIN - ROOT VARIABLES ------ */
+:root {
+  /* colors */
+  --clr-primary-cream: hsl(30, 38%, 92%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+  --clr-neutral-blue: hsl(212, 21%, 14%);
+  --clr-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+
+  --clr-neutral-dark-green: hsl(158, 36%, 20%);
+  
+  --clr-neutral-dark-cyan: hsl(158, 36%, 37%);
+
+  /* font family */
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+
+  /* font weights */
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* font size */
+  --fs-base: 0.875em;
+
+}
+/* ------- END - ROOT VARIABLES ------- */
+
+body {
+  background-color: var(--clr-primary-cream);
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+.product {
+  display: grid;
+  background-color: var(--clr-primary-white);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  font-family: var(--ff-base);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 550px;
+}
+
+.product__category {
+  text-transform: uppercase;
+  letter-spacing: 0.5em; 
+}
+
+.product__title {
+  font-family: var(--ff-accent);
+  font-size: 2em;
+}
+
+.product__content {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.product__content > p {
+  color: var(--clr-neutral-dark-grayish-blue);
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.product__current__price {
+  color: var(--clr-neutral-dark-cyan);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+  font-size: 2em;
+}
+
+.product__original__price {
+  color: var(--clr-neutral-dark-grayish-blue);
+}
+
+.button[data-icon="cart"]::before {
+  content: "";
+  background-image: url('./images/icon-cart.svg');
+  width: 15px;
+  height: 15px;
+}
+
+.button {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--clr-neutral-dark-cyan);
+  color: var(--clr-primary-white);
+  font-weight: var(--fw-bold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-neutral-dark-green);
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 600px) {
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product__content {
+    display: grid;
+    gap: 0.5rem;
+  }
+}
