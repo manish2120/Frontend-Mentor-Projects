@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/manish2120/Frontend-Mentor-Projects/tree/main/free-card-feature-section)
-- Live Site URL: [Add live site URL here](https://four-card-feature-section-mchv.vercel.app.com)
+- Live Site URL: [Add live site URL here](https://four-card-feature-section-mchv.vercel.app)
 
 
 ### Built with
