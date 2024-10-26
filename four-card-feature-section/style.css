@@ -1,0 +1,202 @@
+/* CSS RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0; 
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+img, picture {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* ROOT VARIABLES */
+:root {
+  /* colors */
+  --clr-primary-red: hsl(0, 78%, 62%);
+  --clr-primary-cyan: hsl(180, 62%, 55%);
+  --clr-primary-orange: hsl(34, 97%, 64%);
+  --clr-primary-blue: hsl(212, 86%, 64%);
+  --clr-neutral-dark-blue: hsl(234, 12%, 34%);
+  --clr-neutral-grayish-blue: hsl(229, 6%, 66%);
+  --clr-neutral-light-blue: hsl(0, 0%, 98%);
+
+  /* font family */
+  --ff-poppins: 'Poppins', sans-serif;
+
+  /* font size*/
+  --fs-small: 0.8rem;
+  --fs-base: 15px;
+  --fs-medium: 1.5rem;
+
+  /* font weights */
+  --fw-thin: 200;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+}
+
+/* BEGIN - FONTS */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./fonts/poppins-v21-latin-200.woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/poppins-v21-latin-regular.woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/poppins-v21-latin-600.woff2');
+}
+/* END - FONTS */
+
+/* BEGIN - MAIN STYLING */
+body {
+  height: 100%;
+  font-family: var(--ff-poppins);
+  font-size: var(--fw-base);
+  padding: 1.5rem;
+}
+
+#container {
+  min-height: 100vh;
+  font-size: var(--fs-base);
+  display: grid;
+  place-items: center;
+  gap: 4rem;
+  margin-block: 3rem;
+}
+
+/* header */
+.header__content {
+  text-align: center;
+  color: var(--clr-neutral-grayish-blue);
+  display: grid;
+  gap: 1rem;
+}
+
+.header__heading {
+  font-weight: var(--fw-thin);
+  font-size: var(--fs-medium);
+}
+
+.header__subheading {
+  color: var(--clr-neutral-dark-blue);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-medium);
+}
+
+.intro {
+  max-width: 600px;
+}
+
+/* CARDS */
+.card-body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  max-width: 300px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 2rem;
+  border-top: 3.5px solid var(--clr-neutral-grayish-blue);
+}
+
+.card-group {
+  display: grid;
+  gap: 2rem;
+}
+
+.icon {
+  justify-self: end;
+  align-self: end;
+}
+
+.card__content > h2 {
+  color: var(--clr-neutral-dark-blue);
+  font-size: var(--fs-base);
+}
+
+.card__content > p {
+  font-size: var(--fs-small);
+  color: var(--clr-neutral-grayish-blue);
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40px;
+  width: 40px;
+}
+
+/* begin - cards icon */
+.icon-supervisor {
+  background-image: url('./images/icon-supervisor.svg');
+}
+
+.icon-team-builder {
+  background-image: url('./images/icon-team-builder.svg');
+}
+
+.icon-karma {
+  background-image: url('./images/icon-karma.svg');
+}
+
+.icon-calculator {
+  background-image: url('./images/icon-calculator.svg');
+}
+/* end - cards icon */
+
+.border-cyan {
+  border-color: rgb(16, 204, 204);
+}
+.border-red {
+  border-color: rgb(209, 20, 20);
+}
+.border-orange {
+  border-color: orange;
+}
+.border-blue {
+  border-color: rgb(78, 172, 231);
+}
+/* END MAIN STYLING */
+
+/* BEGIN - MEDIA QUERIES */
+@media screen and (min-width: 920px) {
+  .card-body {
+    display: flex;
+  }
+
+  .card__column__one, .card__column__four {
+    align-self: center;
+  }
+
+  #container {
+    gap: 2rem;
+  }
+}
+/* END - MEDIA QUERIES */
