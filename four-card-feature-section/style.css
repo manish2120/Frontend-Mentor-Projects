@@ -37,6 +37,7 @@ img, picture {
   --fs-small: 0.8rem;
   --fs-base: 15px;
   --fs-medium: 1.5rem;
+  --fs-large: 1.7rem;
 
   /* font weights */
   --fw-thin: 200;
@@ -72,7 +73,6 @@ img, picture {
 
 /* BEGIN - MAIN STYLING */
 body {
-  height: 100%;
   font-family: var(--ff-poppins);
   font-size: var(--fw-base);
   padding: 1.5rem;
@@ -187,6 +187,14 @@ body {
 
 /* BEGIN - MEDIA QUERIES */
 @media screen and (min-width: 920px) {
+  .header__heading {
+    font-size: var(--fs-large);
+  }
+  
+  .header__subheading {
+    font-size: var(--fs-large);
+  }
+
   .card-body {
     display: flex;
   }
