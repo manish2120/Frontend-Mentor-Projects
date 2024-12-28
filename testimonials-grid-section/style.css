@@ -1,0 +1,237 @@
+/* BEGINS::UNIVERSAL RESET */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+cite {
+  all: unset;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* ENDS::UNIVERSAL RESET */
+
+/* PRIMARY COLORS */
+:root {
+  --primary-white : hsl(0, 0%, 100%);
+  --primary-violet: hsl(263, 55%, 52%);
+  --primary-dark-grayish-blue: hsl(217, 19%, 35%);
+  --primary-dark-blackish-blue: hsl(219, 29%, 14%);
+
+  /* neutral colors */
+  --neutral-gray: hsl(0, 0%, 81%);
+  --neutral-grayish-blue: hsl(210, 46%, 95%);
+
+  /* font colors */
+  --primary-white-opacity-50: hsl(0, 0%, 100%, 0.50); /* verified graduate color */
+  --primary-white-opacity-70: hsl(0, 0%, 100%, 0.70); /* quotes paragraph color */
+
+  --primary-grayish-blue-opacity-50: hsl(217, 19%, 35%, 0.50); /* verified graduate color */
+  --primary-blackish-blue-opacity-70: hsl(219, 29%, 14%, 0.70);
+
+  /* base styles */
+  --fs-base: 0.8125em; /* 13px */
+  --fs-regular: 1em; /* 16px */
+
+  /* font family */
+  --ff-barlow-semi-condensed-500: 'Barlow Semi Condensed Medium';
+  --ff-barlow-semi-condensed-600: 'Barlow Semi Condensed Bold';
+}
+
+/* BEGINS::FONT FACE */
+/* barlow-semi-condensed-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow Semi Condensed Medium';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/barlow-semi-condensed-v15-latin-500.woff2') format('woff2');
+}
+
+/* barlow-semi-condensed-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow Semi Condensed Bold';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/barlow-semi-condensed-v15-latin-600.woff2') format('woff2');
+}
+/* ENDS::FONT FACE */
+
+/* BEGINS::GENERAL */
+body {
+  background-color: var(--neutral-grayish-blue);
+}
+
+#container {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4.4375rem 1.5rem;
+  gap: 1.5rem;
+  place-content: center;
+}
+
+.group-masked-img {
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+#container .card {
+  height: 100%;
+  border-radius: 0.7rem;
+  color: var(--primary-white);
+  padding: 1.4375rem 2.125rem 2.125rem 2.125rem;
+  font-family: var(--ff-barlow-semi-condensed-500);
+  color: var(--primary-white-opacity-70);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  position: relative;
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  gap: 1.375rem;
+  font-size: var(--fs-base);
+  overflow: hidden;
+}
+
+#container .card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.quotes {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  z-index: -1;
+}
+
+/* ENDS::GENERAL */
+
+/* BEGINS::CARDS BACKGROUND COLOR */
+
+#container .card:nth-child(1) {
+  background-color: var(--primary-violet);
+}
+
+#container .card:nth-child(2) {
+  background-color: var(--primary-dark-grayish-blue);
+}
+
+#container .card:nth-child(4) {
+  background-color: var(--primary-dark-blackish-blue);
+}
+
+#container .card:nth-child(3), #container .card:nth-child(5) {
+  background-color: var(--primary-white);
+  color: var(--primary-dark-grayish-blue);
+}
+
+/* ENDS::CARDS BACKGROUND COLOR */
+
+/* BEGINS::AUTHOR PICTURE */
+
+.card .author-details {
+  display: flex;
+  gap: 0.9375rem;
+  align-items: center;
+}
+
+.group-masked-img .author-picture {
+  border: 0.2rem solid var(--neutral-grayish-blue);
+  border-radius: 50%;
+  width: 30px;
+  object-fit: cover;
+}
+
+#container .card:nth-child(1) .author-picture, #container .card:nth-child(4) .author-picture {
+  border: 0.25rem solid var(--primary-grayish-blue-opacity-50);
+}
+
+/* ENDS::AUTHOR PICTURE */
+
+/* BEGINS::AUTHOR NAME */
+
+#container .card .author-name {
+  color: var(--primary-white);
+}
+
+#container .card:nth-child(3) .author-name, 
+#container .card:nth-child(5) .author-name {
+  color: var(--primary-dark-grayish-blue);
+}
+
+/* ENDS::AUTHOR NAME */
+
+/* BEGINS::AUTHOR STATUS */
+
+#container .card .author-status {
+  color: var(--primary-white-opacity-50);
+}
+
+#container .card:nth-child(3) .author-status, #container .card:nth-child(5) .author-status {
+  color: var(--primary-grayish-blue-opacity-50);
+}
+
+/* ENDS::AUTHOR STATUS */
+
+/* BEGINS::REVIEW SUMMARY */
+
+.card .review-summary {
+  font-family: var(--ff-barlow-semi-condensed-500);
+  color: var(--primary-white);
+  font-size: 1rem;
+}
+
+.card:nth-child(3) .review-summary, .card:nth-child(5) .review-summary {
+  font-family: var(--ff-barlow-semi-condensed-500);
+  color: var(--primary-grayish-blue);
+}
+
+/* BEGINS::REVIEW SUMMARY */
+
+/* BEGINS::REVIEW */
+
+.card:nth-child(3) .review, .card:nth-child(5) .review {
+  color: var(--primary-blackish-blue-opacity-70);
+}
+
+/* ENDS::REVIEW */
+
+/* BEGINS::MEDIA QUERIES */
+
+/* 1400px */
+@media only screen and (min-width: 87.5em) {
+
+  #container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 16em 16em;
+    gap: 1.5rem;
+    padding-inline: 10.3125rem;
+  }
+
+  #container .card:nth-child(1) {
+    grid-column: 1 / span 2;
+  }
+
+  #container .card:nth-child(3) {
+    order: 4;
+  }
+
+  #container .card:nth-child(4) {
+    order: 5;
+    grid-column: 2 / span 2;
+  }
+
+  #container .card:nth-child(5) {
+    grid-row: span 2;
+  }
+
+}
+
+/* ENDS::MEDIA QUERIES */
