@@ -1,0 +1,211 @@
+/* BEGINS::CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, p {
+  font: unset;
+}
+
+li {
+  padding: 0;
+}
+
+a {
+  font-size: 0;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;  
+}
+
+button {
+  font: inherit;
+}
+/* ENDS::CSS RESET */
+
+/* BEGINS::FONTS */
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/webfonts/open-sans-v40-latin/open-sans-v40-latin-regular.woff2') format('woff2');
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/webfonts/poppins-v22-latin/poppins-v22-latin-regular.woff2') format('woff2');
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../assets/webfonts/poppins-v22-latin/poppins-v22-latin-600.woff2') format('woff2');
+}
+/* ENDS::FONTS */
+
+/* BEGINS::VARIABLES */
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-poppins: 'Poppins';
+  --ff-open-sans: 'Open Sans';
+  --fw-normal: 400;
+  --fw-bold: 600;
+}
+/* ENDS::VARIABLES */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: url('../assets/images/bg-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--clr-violet);
+  color: var(--clr-white);
+  font-family: var(--ff-open-sans);
+}
+
+img {
+  max-inline-size: 100%;
+  height: auto;
+}
+
+.container-md {
+  padding-inline: 5rem;
+}
+
+.heading {
+  font-family: var(--ff-poppins);
+  font-size: 1.875em;
+  font-weight: var(--fw-bold);
+  line-height: 1.8;
+}
+
+.btn-primary {
+  padding: 1rem 4rem;
+  color: var(--clr-soft-magenta);
+  box-shadow: rgba(0, 0, 0, 0.3) 6px 5px 10px 2px;
+  border-radius: 5rem;
+  color: var(--clr-violet);
+  font-family: var(--ff-poppins);
+  margin-top: 1.5rem;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-soft-magenta);
+}
+
+#header {
+ display: flex;
+ align-items: center;
+ justify-content: start;
+ padding-block: 3.75rem;
+}
+
+#main {
+  display: grid;
+}
+
+.col-md {
+  grid-template-rows: auto;
+  grid-template-columns: 50% 30%;
+  justify-items: start;
+  gap: 5rem
+}
+
+#main .main-content {
+  /* width: 63%; */
+  margin-top: 2rem;
+}
+
+#main .main-content .heading::after {
+  content: "";
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+#footer {
+  padding-block: 3.75rem;
+}
+
+#footer a {
+  text-decoration: none;
+}
+
+.socials {
+  gap: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+.social-icon {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  transition: border 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.social-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  cursor: pointer;
+  transition: fill 0.3s ease-in-out;
+}
+.social-icon svg:hover {
+  fill: var(--clr-soft-magenta);
+}
+
+.social-icon:hover {
+  border-color: var(--clr-soft-magenta);
+}
+
+/* BEGINS::MEDIA QUERIES */
+@media only screen and (max-width: 600px) {
+  
+  body {
+    background-image: url('/assets/images/bg-mobile.svg');
+  }
+
+  .container-sm {
+    padding-inline: 2rem;
+  }
+
+  .col-sm {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  #footer .socials {
+    justify-content: center;
+  }
+}
+  /* ENDS::MEDIA QUERIES */
