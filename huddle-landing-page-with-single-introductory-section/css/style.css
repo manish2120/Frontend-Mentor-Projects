@@ -113,14 +113,14 @@ img {
   background-color: var(--clr-soft-magenta);
 }
 
-#header {
+.site-header {
  display: flex;
  align-items: center;
  justify-content: start;
  padding-block: 3.75rem;
 }
 
-#main {
+.site-main {
   display: grid;
 }
 
@@ -131,30 +131,30 @@ img {
   gap: 5rem
 }
 
-#main .main-content {
-  /* width: 63%; */
+.main-content {
   margin-top: 2rem;
 }
 
-#main .main-content .heading::after {
+.heading::after {
   content: "";
   display: block;
   margin-bottom: 1.2rem;
 }
 
-#footer {
+.site-footer {
   padding-block: 3.75rem;
 }
 
-#footer a {
-  text-decoration: none;
-}
 
 .socials {
   gap: 1rem;
   list-style: none;
   display: flex;
   justify-content: end;
+}
+
+.social-link {
+  text-decoration: none;
 }
 
 .social-icon {
